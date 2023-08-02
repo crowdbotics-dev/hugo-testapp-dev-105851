@@ -14,30 +14,6 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return hugotestappdevAPI.post(`/api/v1/signup/`, payload)
 }
-function modules_articles_article_list(payload) {
-  return hugotestappdevAPI.get(`/modules/articles/article/`)
-}
-function modules_articles_article_create(payload) {
-  return hugotestappdevAPI.post(`/modules/articles/article/`, payload)
-}
-function modules_articles_article_retrieve(payload) {
-  return hugotestappdevAPI.get(`/modules/articles/article/${payload.id}/`)
-}
-function modules_articles_article_update(payload) {
-  return hugotestappdevAPI.put(
-    `/modules/articles/article/${payload.id}/`,
-    payload
-  )
-}
-function modules_articles_article_partial_update(payload) {
-  return hugotestappdevAPI.patch(
-    `/modules/articles/article/${payload.id}/`,
-    payload
-  )
-}
-function modules_articles_article_destroy(payload) {
-  return hugotestappdevAPI.delete(`/modules/articles/article/${payload.id}/`)
-}
 function modules_hubspot_service_access_token_create(payload) {
   return hugotestappdevAPI.post(`/modules/hubspot/service/access/token/`)
 }
@@ -134,12 +110,6 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
-  modules_articles_article_list,
-  modules_articles_article_create,
-  modules_articles_article_retrieve,
-  modules_articles_article_update,
-  modules_articles_article_partial_update,
-  modules_articles_article_destroy,
   modules_hubspot_service_access_token_create,
   modules_hubspot_service_contact_deals_list_retrieve,
   modules_hubspot_service_deals_associations_create_create,
