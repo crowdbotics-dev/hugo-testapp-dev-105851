@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, Image } from "r
 const EntryScreen = () => {
   return <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Welcome to My App</Text>
+        <Text style={styles.title}>Welcome to Note-taking App</Text>
       </View>
       <View style={styles.content}>
         <TouchableOpacity style={styles.iconContainer}>
