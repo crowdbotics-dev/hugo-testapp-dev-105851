@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "dadb5a1baf4c5a7606f82ce113d425f3e63fc1508fa7ccade78e3b3132053e38"
+            "sha256": "8a87d3c59d161a7c7e6b588f9955a81c6ae3db8f366e8dc4eecdfc3c010d2acb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -59,6 +59,10 @@
         "cb-django-drive": {
             "editable": true,
             "path": "./modules/django_drive"
+        },
+        "cb-django-files": {
+            "editable": true,
+            "path": "./modules/django_files"
         },
         "certifi": {
             "hashes": [
