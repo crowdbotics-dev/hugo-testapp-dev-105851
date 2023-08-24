@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "96214c79bfd9e91765035333daf94e457fbe51698d077682f61939d155a1e584"
+            "sha256": "d23e7239b3a9651d3b5257e554d5e3e7e0d69cbfd4a09b99044ab71f61dad78f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -63,6 +63,10 @@
         "cb-django-files": {
             "editable": true,
             "path": "./modules/django_files"
+        },
+        "cb-django-slack": {
+            "editable": true,
+            "path": "./modules/django_slack"
         },
         "cb-django-social-auth": {
             "editable": true,
@@ -1142,6 +1146,14 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.16.0"
+        },
+        "slack-sdk": {
+            "hashes": [
+                "sha256:0b52bb32a87c71f638b9eb47e228dffeebf89de5e762684ef848276f9f186c84",
+                "sha256:47fb4af596243fe6585a92f3034de21eb2104a55cc9fd59a92ef3af17cf9ddd8"
+            ],
+            "markers": "python_full_version >= '3.6.0'",
+            "version": "==3.19.5"
         },
         "soupsieve": {
             "hashes": [
