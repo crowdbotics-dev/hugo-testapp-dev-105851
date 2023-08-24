@@ -63,6 +63,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-social-auth](backend/modules)
 - [django-slack](backend/modules)
 - [django-zoom-info](backend/modules)
+- [django-articles](backend/modules)
 
 # Getting started: Frontend
 
