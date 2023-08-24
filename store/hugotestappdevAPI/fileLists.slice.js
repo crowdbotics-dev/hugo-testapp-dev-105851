@@ -1,23 +1,23 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const rest_auth_registration_verify_email_create = createAsyncThunk(
-  "verifyEmails/rest_auth_registration_verify_email_create",
+export const modules_drive_service_file_list_retrieve = createAsyncThunk(
+  "fileLists/modules_drive_service_file_list_retrieve",
   async payload => {
-    const response = await apiService.rest_auth_registration_verify_email_create(
+    const response = await apiService.modules_drive_service_file_list_retrieve(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const verifyEmailsSlice = createSlice({
-  name: "verifyEmails",
+const fileListsSlice = createSlice({
+  name: "fileLists",
   initialState,
   reducers: {},
   extraReducers: builder => {
     builder
       .addCase(
-        rest_auth_registration_verify_email_create.pending,
+        modules_drive_service_file_list_retrieve.pending,
         (state, action) => {
           if (state.api.loading === "idle") {
             state.api.loading = "pending"
@@ -25,16 +25,21 @@ const verifyEmailsSlice = createSlice({
         }
       )
       .addCase(
-        rest_auth_registration_verify_email_create.fulfilled,
+        modules_drive_service_file_list_retrieve.fulfilled,
         (state, action) => {
           if (state.api.loading === "pending") {
-            state.entities.push(action.payload)
+            state.entities = [
+              ...state.entities.filter(
+                record => record.id !== action.payload.id
+              ),
+              action.payload
+            ]
             state.api.loading = "idle"
           }
         }
       )
       .addCase(
-        rest_auth_registration_verify_email_create.rejected,
+        modules_drive_service_file_list_retrieve.rejected,
         (state, action) => {
           if (state.api.loading === "pending") {
             state.api.error = action.error
@@ -45,6 +50,6 @@ const verifyEmailsSlice = createSlice({
   }
 })
 export default {
-  rest_auth_registration_verify_email_create,
-  slice: verifyEmailsSlice
+  modules_drive_service_file_list_retrieve,
+  slice: fileListsSlice
 }
